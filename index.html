@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio-Website</title>
+    <style>
+      * {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+      .navbar {
+        background-color: black;
+        border-radius: 25px;
+      }
+      .navbar li {
+        color: white;
+      }
+      .navbar ul {
+        overflow: auto;
+      }
+      .navbar li a {
+        padding: 3px 3px;
+        text-decoration: none;
+        color: white;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .navbar li {
+        float: left; /* due to float it get overflow from the parent that removes it's background color*/
+        list-style: none;
+        /* list style to remove  bullets */
+        margin: 22px 45px;
+      }
+      .navbar li a {
+        padding: 5px 5px;
+      }
+      .container {
+        width: 100%;
+        height: 100vh;
+        border: 2px solid black;
+        height: 500px;
+      }
+      .cont {
+        float: right;
+        height: 500px;
+        width: 500px;
+      }
+      .cont img {
+        height: 500px;
+        width: 500px;
+      }
+
+      .container div {
+        border: 2px solid black;
+      }
+      .name {
+        float: left;
+        width: 400px;
+        height: 400px;
+        margin-top: 75px;
+        font-size: 30px;
+
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+      .name p {
+        text-align: center;
+      }
+      .surname {
+        margin-top: -28px;
+      }
+      .name h5 {
+        font-size: 20px;
+        text-align: center;
+        margin-top: -22px;
+        color: rgb(38 142 159);
+      }
+      .btn {
+        text-align: center;
+        border: 4px solid black;
+        border-radius: 12px;
+
+        font-size: 14px;
+        line-height: 32px;
+        font-weight: 500;
+        text-transform: uppercase;
+        padding: 2px 14px;
+        margin: 6px 7px;
+        /* color: #008000; */
+        background-color: #a5bfd5;
+      }
+      .btn:hover {
+        background-color: rgb(18, 155, 193);
+        cursor: pointer;
+        /* color: #111;
+        background: #39ff14; */
+        box-shadow: 0 0 50px #0f94b1;
+      }
+      .container2 {
+        width: 100%;
+        height: 100vh;
+        border: 2px solid black;
+      }
+
+      #btn1 {
+        float: left;
+        margin-left: 91px;
+      }
+      #btn2 {
+        float: right;
+        margin-right: 81px;
+      }
+      .photu {
+        float: left;
+        margin-top: 105px;
+        margin-left: 163px;
+        width: 300px;
+        height: 400px;
+        border: 2px solid black;
+      }
+      .intro {
+        float: right;
+        margin-top: 50px;
+        margin-right: 20px;
+        width: 500px;
+        height: 450px;
+        border: 2px solid black;
+        font-size: 25px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        padding: 0px 0px;
+        color: #098971;
+      }
+
+      .photu img {
+        width: 300px;
+        height: 315px;
+      }
+      .p {
+        padding: 1px 13px;
+      }
+      #p1 {
+        margin-top: 150px;
+      }
+      #p4 {
+        margin-top: -22px;
+      }
+      #p2 {
+        margin-top: -10px;
+      }
+      .btn3 {
+        text-align: center;
+        border: 4px solid black;
+        border-radius: 12px;
+
+        font-size: 14px;
+        line-height: 32px;
+        font-weight: 500;
+        text-transform: uppercase;
+        padding: 2px 14px;
+        margin: 6px 7px;
+        float: left;
+        margin-left: 185px;
+        background-color: #a5bfd5;
+      }
+      .btn3:hover {
+        background-color: crimson;
+        box-shadow: 0 0 50px #e65737;
+      }
+      .mid {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        text-align: center;
+        border: 2px solid blue;
+      }
+      .mid a {
+        text-decoration: none;
+        color: rgb(37 20 78);
+      }
+      .small {
+        border-radius: 20px;
+        display: inline-block;
+        width: 210px;
+        height: 250px;
+
+        justify-content: center;
+        align-items: center;
+        background-color: #ebe7ef;
+      }
+      .small:hover {
+        box-shadow: 0 0 50px #4b30a1;
+        background-color: #7a7cad;
+        zoom: 103%;
+      }
+      .small img {
+        width: 50px;
+        height: 50px;
+        justify-content: space-around;
+        margin-left: 75px;
+        margin-top: 36px;
+      }
+      .small p {
+        justify-content: space-around;
+        margin-top: 10px;
+        text-align: center;
+      }
+      .container3 {
+        border: 2px solid blueviolet;
+        width: 100%;
+        height: 400px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .p11 {
+        margin-top: 10px;
+      }
+      .container4 {
+        width: 100%;
+        height: 700px;
+        border: 2px solid blueviolet;
+      }
+      .container9 {
+        border: 2px solid black;
+        display: flex;
+        width: 75%;
+        height: 350px;
+        justify-content: center;
+        float: left;
+        margin-left: 133px;
+        margin-top: 120px;
+        align-items: center;
+        flex-direction: column;
+        background-color: #fcfbff;
+        border-radius: 20px;
+      }
+      .btn4 {
+        text-align: center;
+        border: 4px solid black;
+        border-radius: 8px;
+
+        text-transform: uppercase;
+        padding: 2px 14px;
+        margin: 6px 7px;
+        height: 36px;
+      }
+      .btn4:hover {
+        cursor: pointer;
+        background-color: #747cab;
+
+        box-shadow: 0 0 50px #4b30a1;
+      }
+      .input {
+        width: 350px;
+        height: 30px;
+      }
+      .container9:hover {
+        box-shadow: 0 0 50px #4b30a1;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Pages</a></li>
+        </ul>
+      </nav>
+
+      <div class="container">
+        <div class="name">
+          <p>HELLO!</p>
+          <p>I AM ABHISHEK</p>
+          <p class="surname">UPADHYAY</p>
+          <h5>Mechanical Engineer at NSUT</h5>
+          <button class="btn" id="btn1">Hire me</button>
+          <button class="btn" id="btn2">Get CV</button>
+        </div>
+        <div class="cont">
+          <img src="port-img.webp" alt="" />
+        </div>
+      </div>
+
+      <div class="container2">
+        <div class="photu">
+          <img src="ph-1.jpg" alt="" />
+        </div>
+        <div class="intro">
+          <p class="p" id="p1">Mechanical Engineer Under Construction</p>
+          <p class="p" id="p2">at Netaji Subhas University of Techonology</p>
+          <p class="p" id="p3">Interests-</p>
+          <p class="p" id="p4">Web Development, Finance and Mechanics</p>
+          <button class="btn3">Donwnload CV</button>
+        </div>
+      </div>
+      <div class="mid">
+        <h2><a href="#">My Expertise</a></h2>
+      </div>
+      <div class="container3">
+        <div class="small">
+          <img src="ph-4.webp" alt="" />
+          <p class="p11">Front End</p>
+          <p>Web design</p>
+          <p>All Basic websites that deals with Fornt End only</p>
+        </div>
+        <div class="small">
+          <img src="ph-5.webp" alt="" />
+          <p class="p11">UX-Design</p>
+          <p>All Design Related to UX</p>
+        </div>
+        <div class="small">
+          <img src="ph-6.webp" alt="" />
+          <p class="p11">Auto Cad</p>
+          <p>Auto Cad 2-D and 3-D operations</p>
+        </div>
+        <div class="small">
+          <img src="ph-7.webp" alt="" />
+          <p class="p11">C++</p>
+          <p>Data Structure and Algorithm</p>
+        </div>
+      </div>
+      <div class="container4">
+        <div class="container9">
+          <div>
+            <h2>Get my update anywhere and anytime</h2>
+          </div>
+          <div class="cont8">
+            <input class="input" type="text" placeholder="Enter your e-mail" />
+            <button class="btn4">Get Started</button>
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
